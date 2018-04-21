@@ -27,13 +27,14 @@ function start_asteroids(windowwidth, windowheight, container, args, assetsPath,
 }
 
 function destroy_asteroids(){
-    console.log("destroy_asteroids");
-    game.state.remove('Preloader');
-    game.state.remove('Menu');
-    game.state.remove('Game');
-    game.state.remove('GameOver');
+    // console.log("destroy_asteroids");
+    // game.state.remove('Preloader');
+    // game.state.remove('Menu');
+    // game.state.remove('Game');
+    // game.state.remove('GameOver');
     game.destroy();
-    Asteroids.Preloader = null;
+    // Asteroids.Preloader = null;
+    document.getElementById("asteroid").remove();
 
 }
  
@@ -59,8 +60,8 @@ Asteroids.Preloader.prototype = {
          this.game.load.image("menu_bc", assets_path+"assets/sprites/menu_bc.png");
          this.game.load.image("projectile", assets_path+"assets/sprites/projectile.png");
          this.game.load.image("ship", assets_path+"assets/sprites/ship.png");
-         this.game.load.image("space", assets_path+"asteroids/assets/sprites/space.png");
-         this.game.load.image("start", assets_path+"asteroids/assets/sprites/start.png");
+         this.game.load.image("space", assets_path+"assets/sprites/space.png");
+         this.game.load.image("start", assets_path+"assets/sprites/start.png");
          this.game.canvas.id = 'asteroid';
 
         // this.load.images(['ship', 'projectile', 'asteroid', 'asteroid2', 'earth', 'space', 'live', 'start', 'menu_bc']);
